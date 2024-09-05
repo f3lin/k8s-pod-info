@@ -1,6 +1,6 @@
 # k8s-pod-info
 
-A FastAPI-based web application that displays key Kubernetes cluster information such as Pod name, Namespace, Pod IP, and Node name. This app dynamically retrieves these details from the Kubernetes environment and presents them in a simple web interface.
+A FastAPI-based web application that displays key Kubernetes cluster information such as Pod name, Namespace, Pod IP, and Node name. This app dynamically retrieves these details from the Kubernetes environment using fieldRef and presents them in a simple web interface.
 
 ## Features
 
@@ -41,8 +41,6 @@ A FastAPI-based web application that displays key Kubernetes cluster information
    cd k8s 
    kubectl apply -f k8s-pod-info.yaml
    ```
-
-You can deploy the app in a Kubernetes environment using the provided deployment manifest. The application retrieves pod-specific metadata such as Pod name, Namespace, and Pod IP using Kubernetes fieldRef.
 
 [Docker image](https://hub.docker.com/layers/f3lin/cluster-info/v0.1.1/images/sha256:6387c98c5e40db45ed3cc3f4eac8b5a8753f086deb29951af5535518d3a27407?uuid=7123C56A-6193-43DD-A3DF-70B2678620CC)
 
