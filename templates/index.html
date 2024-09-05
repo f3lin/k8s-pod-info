@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Cluster Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .label {
+            font-weight: bold;
+            color: #34495e;
+        }
+        .value {
+            color: #16a085;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kubernetes Cluster Information</h1>
+        <p><span class="label">Pod Name:</span> <span class="value">{{ cluster_info.pod_name }}</span></p>
+        <p><span class="label">Namespace:</span> <span class="value">{{ cluster_info.pod_namespace }}</span></p>
+        <p><span class="label">Pod IP:</span> <span class="value">{{ cluster_info.pod_ip }}</span></p>
+        <p><span class="label">Node Name:</span> <span class="value">{{ cluster_info.node_name }}</span></p>
+        <div class="footer">
+            Powered by FastAPI | Kubernetes Cluster Info
+        </div>
+    </div>
+</body>
+</html>
